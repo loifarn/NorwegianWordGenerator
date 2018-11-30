@@ -1,0 +1,26 @@
+<html id="words">
+    <head>
+        <link rel="shortcut icon" type="image/png" href="/static/favicon.png"/>
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet" type="text/css">
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+        <script type=text/javascript>$SCRIPT_ROOT = {{ request.script_root|tojson|safe }};</script>
+        <script src="/static/jquery-3.3.1.min.js"></script>
+        <script src="/static/styler.js"></script>
+        <script src="/static/generator.js"></script>
+    </head>
+    <body style="text-align: center; font-family: lato; font-weight: 400;" onload="apply_theme();">
+        <img src="/static/flag_light.gif" id="NO_FLAG">
+        <div>
+            <h1><span id="result">?</span></h1>
+        </div>
+        <input type="button" class="generate" value="Nytt ord">
+        <input type="button" value="Nattmodus på/av" onclick="switch_theme();">
+        <div class="music">
+            <audio autoplay>
+                <iframe src="/static/NO_anthem.mp3" allow="autoplay" id="audio" style="display:none">
+                    <source src="/static/NO_anthem.mp3" type="audio/mpeg">
+                </iframe>
+            </audio>
+        </div>
+    </body>
+</html>
